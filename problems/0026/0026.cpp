@@ -6,13 +6,12 @@ public:
         if (nums.empty()) {
             return 0;
         }
-        int i = 0, j = 1;
-        while (i < nums.size() && j < nums.size()) {
+        int i = 0;
+        for (int j = 1; j < nums.size(); ++j) {
             if (nums[j] != nums[i]) {
                 nums[i + 1] = nums[j];
                 ++i;
             }
-            ++j;
         }
 
         return i + 1;

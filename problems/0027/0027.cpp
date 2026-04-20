@@ -7,15 +7,12 @@ public:
             return 0;
         }
         int i = 0;
-        for (int j = 1; j < nums.size(); ++j) {
-            if (nums[i] == val) {
+        for (int j = 0; j < nums.size(); ++j) {
+            if (nums[j] != val) {
                 nums[i] = nums[j];
-            }
-            else if (nums[j] != val) {
-                nums[i + 1] = nums[j];
                 ++i;
             }
         }
-        return i + 1;
+        return i;
     }
 };

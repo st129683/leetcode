@@ -5,7 +5,7 @@ class Solution {
 public:
     bool isValid(std::string s) {
         std::stack <char> st;
-        for (char i : s) {
+        for (char& i : s) {
             if (i == '(' || i == '{' || i == '[') {
                 st.push(i);
             }
